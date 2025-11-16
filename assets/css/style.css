@@ -346,7 +346,19 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
+
+@media only screen and (max-width: 600px) {
+  #hero {
+    background-image: url("../img/hero-bg-mobile.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    height: 100vh;
+  }
+}
+
+@media (min-width: 769px) {
+  #hero {
   width: 100%;
   background-image: url("../img/hero-bg.png");
   background-repeat: no-repeat;
@@ -354,7 +366,9 @@ h1, h2, h3, h4, h5, h6 {
   background-position: right top;
   margin-top: 70px;
   padding: 60px 0;
+  height: 100vh;
 }
+  }
 
 #hero h1 {
   margin: 0 0 20px 0;
