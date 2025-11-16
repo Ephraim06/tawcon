@@ -9,12 +9,21 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,9 +33,41 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .card-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  .service-item {
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+  }
+
+  .service-item:hover {
+    border-left-color: #3b82f6;
+    background-color: rgba(59, 130, 246, 0.05);
+  }
+</style>
 
 <body>
 
@@ -35,9 +76,7 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Tawcon Projects</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <a href="index.html"><img src="assets/img/logo/logo.jpg" alt="" class="img-fluid"></a>
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -80,314 +119,306 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-
+    <!-- Your existing content -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="fade-up">
-          <div>
-            <h1 class="text-primary">Expert Plumbing & Electrical Solutions</h1>
-            <h2>Tawcon Projects Plumbing and Electrical</h2>
-            <a href="#about" class="btn-get-started scrollto">Get a Free Quote</a>
-          </div>
+      <div class="pt-5" data-aos="fade-up">
+        <div class="hero-text">
+          <h2>Affordale, Fast, and Reliable</h2>
+          <h1 class="text-primary">Expert Plumbing & Electrical Services</h1>
+          <a href="tel:+27760394774"
+              class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1">
+              <i class="fas fa-phone mr-2"></i>
+              Get A Free Quote
+            </a
         </div>
       </div>
     </div>
 
-  </section><!-- End Hero -->
+    <!-- Add these spanner elements -->
+    <div class="spanner-left"></div>
+    <div class="spanner-right"></div>
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="zoom-in">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-6xl">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Image Section -->
+          <div class="lg:w-1/2" data-aos="zoom-in">
+            <div class="relative">
+              <img src="assets/img/tawcon-team.jpg" class="w-full h-auto rounded-2xl shadow-xl"
+                alt="Tawcon Projects Professional Team">
+              <!-- Decorative elements -->
+              <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500 rounded-2xl -z-10"></div>
+              <div class="absolute -top-6 -left-6 w-20 h-20 bg-blue-500 rounded-full -z-10 opacity-80"></div>
+            </div>
           </div>
-          <div class="col-lg-6 d-flex flex-column justify-contents-center" data-aos="fade-left">
-            <div class="content pt-4 pt-lg-0">
-              <h3>Learn more about us</h3>
-              <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperd</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate tera noden carma palorp mades tera.
-              </p>
+
+          <!-- Content Section -->
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <div
+              class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 lg:p-10 shadow-lg border border-gray-100">
+              <!-- Header -->
+              <div class="mb-8">
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                  Qualified Professionals Serving Cape Town & Surrounds
+                </h3>
+                <p class="text-xl text-gray-600 mt-4 font-medium">
+                  Tawcon Projects Plumbing and Electrical
+                </p>
+              </div>
+
+              <!-- Services List -->
+              <div class="space-y-6 mb-8">
+                <!-- Plumbing Service -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-tint text-blue-600 text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Plumbing Services</h4>
+                    <p class="text-gray-600">
+                      We offer a full spectrum of plumbing services, including installation, maintenance, and repair of
+                      water supply systems, drainage solutions, and fixture installations.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Electrical Service -->
+                <div class="flex items-start space-x-4">
+                  <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-bolt text-orange-600 text-lg"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Electrical Services</h4>
+                    <p class="text-gray-600">
+                      Our electrical expertise encompasses wiring, panel upgrades, lighting installations, and
+                      troubleshooting to ensure reliable and safe electrical systems.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Features Grid -->
+              <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check-circle text-green-500"></i>
+                  <span class="text-gray-700 font-medium">24/7 Emergency</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check-circle text-green-500"></i>
+                  <span class="text-gray-700 font-medium">Licensed Experts</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check-circle text-green-500"></i>
+                  <span class="text-gray-700 font-medium">Free Quotes</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check-circle text-green-500"></i>
+                  <span class="text-gray-700 font-medium">Quality Guarantee</span>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <a href="#contact"
+                class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <i class="fas fa-comment-dollar mr-3"></i>
+                Get a Free Quote
+              </a>
             </div>
           </div>
         </div>
-
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container">
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-gray-50">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <!-- Sticky Content Column -->
+          <div class="lg:w-2/5">
+            <div class="sticky top-24">
+              <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-xl border border-gray-100">
+                <!-- Main Heading -->
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  Qualified Professionals Serving
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">
+                    Cape Town & Surrounds
+                  </span>
+                </h2>
 
-        <div class="row">
-          <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item" data-aos="fade-up">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
-                  <h4>Modi sit est</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                <!-- Description -->
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                  Tawcon Projects is an experienced plumbing and electrical company. We are a friendly, trained team of
+                  experts suitably qualified and registered to provide a wide range of services across Cape Town and
+                  bordering towns within an approximate 50 km to 100 km radius.
+                </p>
+
+                <!-- Features List -->
+                <div class="space-y-4 mb-8">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">24/7 Emergency Services</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Licensed & Insured</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                      <i class="fas fa-check text-green-600 text-sm"></i>
+                    </div>
+                    <span class="text-gray-700 font-medium">Free Quotes Available</span>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="#contact"
+                  class="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                  <div
+                    class="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                    <i class="fas fa-comment-dots text-white text-sm"></i>
+                  </div>
+                  <span class="text-lg">Need Our Help?</span>
                 </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="100">
-                <a class="nav-link" data-toggle="tab" href="#tab-2">
-                  <h4>Unde praesentium sed</h4>
-                  <p>Voluptas vel esse repudiandae quo excepturi.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="200">
-                <a class="nav-link" data-toggle="tab" href="#tab-3">
-                  <h4>Pariatur explicabo vel</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
-                </a>
-              </li>
-              <li class="nav-item mt-2" data-aos="fade-up" data-aos-delay="300">
-                <a class="nav-link" data-toggle="tab" href="#tab-4">
-                  <h4>Nostrum qui quasi</h4>
-                  <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
-                </a>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <figure>
-                  <img src="assets/img/features-1.png" alt="" class="img-fluid">
-                </figure>
+
+          <!-- Service Areas Column -->
+          <div class="lg:w-3/5">
+            <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-100">
+              <!-- Section Header -->
+              <div class="text-center mb-12">
+                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  Areas We Cover
+                </h3>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-600 mx-auto rounded-full"></div>
               </div>
-              <div class="tab-pane" id="tab-2">
-                <figure>
-                  <img src="assets/img/features-2.png" alt="" class="img-fluid">
-                </figure>
+
+              <!-- Service Areas Grid -->
+              <div class="space-y-8">
+                <!-- Cape Peninsula -->
+                <div
+                  class="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-mountain text-blue-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Cape Peninsula
+                      </h4>
+                      <p class="text-gray-600 leading-relaxed">
+                        CBD, Woodstock, Pinelands, Camps Bay, and surrounding areas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Northern Suburbs -->
+                <div
+                  class="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-building text-blue-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Northern Suburbs
+                      </h4>
+                      <p class="text-gray-600 leading-relaxed">
+                        Bellville, Durbanville, Goodwood, Stikland, Brackenfell, Kraaifontein, Kuilsriver, Parow, and
+                        surrounding areas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Southern Suburbs -->
+                <div
+                  class="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-tree text-blue-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Southern Suburbs
+                      </h4>
+                      <p class="text-gray-600 leading-relaxed">
+                        Claremont, Constantia, Newlands, Kirstenhof, Plumstead, Kenilworth, Wynberg, Grassy Park, Hout
+                        Bay, Rondebosch, Muizenberg, and surrounding areas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- West Coast -->
+                <div
+                  class="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-umbrella-beach text-blue-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        West Coast
+                      </h4>
+                      <p class="text-gray-600 leading-relaxed">
+                        Milnerton, Melkbosstrand, Atlantic Beach, West Beach, Grotto Bay, Atlantis, Yzerfontein,
+                        Langebaan, Darling and surrounding areas
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Helderberg & Boland -->
+                <div
+                  class="group p-6 rounded-xl border-2 border-transparent hover:border-blue-200 hover:bg-blue-50 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-wine-glass-alt text-blue-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h4 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Helderberg & Boland
+                      </h4>
+                      <p class="text-gray-600 leading-relaxed">
+                        Strand, Somerset West, Klapmuts, Stellenbosch, Paarl, Franschhoek, and surrounding areas
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="tab-pane" id="tab-3">
-                <figure>
-                  <img src="assets/img/features-3.png" alt="" class="img-fluid">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <figure>
-                  <img src="assets/img/features-4.png" alt="" class="img-fluid">
-                </figure>
+
+              <!-- Footer Note -->
+              <div class="mt-12 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                <div class="flex items-center space-x-3">
+                  <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <i class="fas fa-info-circle text-blue-600"></i>
+                  </div>
+                  <p class="text-blue-800 font-medium">
+                    Don't see your area listed? Contact us - we may still be able to help!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in">
-            <div class="icon-box icon-box-pink">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box icon-box-cyan">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box icon-box-green">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box icon-box-blue">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-              </div>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
+    </section>
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -395,513 +426,1254 @@
 
         <div class="row" data-aos="zoom-in">
           <div class="col-lg-9 text-center text-lg-left">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Need Reliable Plumbing Solutions for Your Home or Business?</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+              laborum.</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="#">Get A Free Quote</a>
           </div>
         </div>
 
       </div>
     </section><!-- End Cta Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
+    <!-- How Can We Help You Section -->
+    <section id="help" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <!-- Sticky Image Column -->
+          <div class="lg:w-2/5">
+            <div class="sticky top-24">
+              <div class="relative">
+                <img src="assets/img/woman-plumber-problem.jpg" loading="lazy"
+                  alt="Professional plumbing services for leaking pipes and maintenance"
+                  class="w-full h-auto rounded-2xl shadow-2xl">
+                <!-- Decorative Elements -->
+                <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-orange-500 rounded-2xl -z-10"></div>
+                <div class="absolute -top-6 -left-6 w-20 h-20 bg-blue-500 rounded-full -z-10 opacity-80"></div>
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
+                <!-- Experience Badge -->
+                <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl p-4 shadow-lg border border-gray-200">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <i class="fas fa-award text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-600">Trusted Since</p>
+                      <p class="text-lg font-bold text-gray-900">1995</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        <div class="owl-carousel testimonials-carousel" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+              <!-- Quick Contact Card -->
+              <div class="mt-8 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <h4 class="text-xl font-bold text-gray-900 mb-4">Need Immediate Help?</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <i class="fas fa-phone text-green-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-600">Emergency Line</p>
+                      <p class="font-semibold text-gray-900">+27 21 123 4567</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <i class="fas fa-clock text-blue-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-600">Available</p>
+                      <p class="font-semibold text-gray-900">24/7 Emergency Service</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+          <!-- Services Content Column -->
+          <div class="lg:w-3/5">
+            <div class="bg-white rounded-xl p-8 lg:p-10">
+              <!-- Header -->
+              <div class="mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  How Can We Help You?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                  We provide an extensive range of plumbing services to homes, apartments, factories, businesses,
+                  complexes, farms, schools, and shopping malls.
+                </p>
+              </div>
+
+              <!-- Main Services Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <!-- Service 1 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-tools text-blue-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        General Maintenance & Repairs
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-plus-circle text-blue-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        New Installations
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-file-certificate text-blue-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Certificate of Compliance (Plumbing COC)
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-orange-50 to-white rounded-xl border-2 border-transparent hover:border-orange-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-tint text-orange-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3
+                        class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-orange-700 transition-colors">
+                        Burst or Leaking Geysers & Pipes
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-home text-blue-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Bathroom & Kitchen Renovations
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-blue-50 to-white rounded-xl border-2 border-transparent hover:border-blue-200 transition-all duration-300">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-water text-blue-600 text-lg"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                        Water Meters
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div
+                  class="group p-5 bg-gradient-to-br from-green-50 to-white rounded-xl border-2 border-transparent hover:border-green-200 transition-all duration-300 md:col-span-2">
+                  <div class="flex items-start space-x-4">
+                    <div
+                      class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                      <i class="fas fa-shield-alt text-green-600 text-lg"></i>
+                    </div>
+                    <div class="flex-1">
+                      <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
+                        Occupational Health and Safety (OHS) Compliant Services
+                      </h3>
+                      <p class="text-gray-600 text-sm">
+                        For corporate clients who require formal OHS compliances and protocols
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Specialized Services Section -->
+              <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <i class="fas fa-microchip text-blue-600 mr-3"></i>
+                  Advanced Technology Services
+                </h3>
+                <p class="text-gray-700 font-semibold mb-6">
+                  Moreover, we offer specialised services that involve advanced technology, including:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Specialized Service 1 -->
+                  <div class="text-center group">
+                    <div
+                      class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <i class="fas fa-search text-blue-600 text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Expert Leak Detection</h4>
+                    <p class="text-sm text-gray-600">Residential, commercial, industrial, farming, and pool leaks</p>
+                  </div>
+
+                  <!-- Specialized Service 2 -->
+                  <div class="text-center group">
+                    <div
+                      class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <i class="fas fa-wind text-blue-600 text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Drain Services</h4>
+                    <p class="text-sm text-gray-600">High-pressure jetting, repairs, replacement, and camera inspections
+                    </p>
+                  </div>
+
+                  <!-- Specialized Service 3 -->
+                  <div class="text-center group">
+                    <div
+                      class="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <i class="fas fa-satellite-dish text-blue-600 text-xl"></i>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Underground Pipe Scanning</h4>
+                    <p class="text-sm text-gray-600">Advanced detection and mapping</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Section -->
+              <div class="mt-12 text-center">
+                <a href="#contact"
+                  class="inline-flex items-center justify-center px-10 py-4 bg-gradient-to-r from-blue-600 to-orange-500 hover:from-blue-700 hover:to-orange-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <i class="fas fa-calendar-check mr-3"></i>
+                  Schedule Your Service Today
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Our Services
+          </h2>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Comprehensive plumbing and electrical solutions for residential, commercial, and industrial clients.
+            We deliver quality workmanship with a commitment to excellence and customer satisfaction.
+          </p>
+        </div>
+
+        <!-- Featured Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Drain Cleaning -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-wind text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Drain Cleaning</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              We do cleaning of blocked drainages, drain cleaning and root cutting in drainage systems.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Leak Detection & Repair -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-search text-green-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Leak Detection & Repair</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Advanced leak detection to establish exactly where water is leaking from, making repairs precise and
+              efficient.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Solar Systems -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-solar-panel text-yellow-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Solar Systems</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              We install tailor-made solar and UPS systems, plus provide maintenance and servicing for existing solar
+              installations.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Water Line Installation/Repair -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-tint text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Water Line Installation/Repair</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Fixing under-tile pipe leaks by replacing copper pipes with multi-layered Cobra pipes, with professional
+              retiling.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Sewer Installation & Repair -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-pipe text-purple-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Sewer Installation & Repair</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Professional layout and installation of underground drainage pipes for efficient water discharge in
+              building projects.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+
+          <!-- Shower Base Waterproofing -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-shower text-orange-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Shower Base Waterproofing</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Complete shower base removal and sealing from the bottom, followed by professional retiling with mosaic.
+            </p>
+            <a href="#"
+              class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+              Read More
+              <i class="fas fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Comprehensive Services Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- General Plumbing Services -->
+          <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-8 text-white" data-aos="fade-right">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-tools text-white text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold">General Plumbing Services</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Plumbing Installations & Repairs</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Electrical Installations & Maintenance</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Leak Detection & Pipe Replacement</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Water Heater & Geyser Installations</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Solar System Installations</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Drain Cleaning & Unblocking</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Wiring & Rewiring for Residential & Commercial</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Generator & Backup Power System Setup</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-check-circle text-green-400 mr-3"></i>
+                <span>Emergency Plumbing & Electrical Services</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electrical Services -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-up">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-bolt text-yellow-600 text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Electrical Services</h3>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Installation & Wiring -->
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                  <i class="fas fa-wrench text-blue-600 mr-2"></i>
+                  Installation & Wiring
+                </h4>
+                <ul class="text-gray-600 text-sm space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-blue-600 text-xs mt-1 mr-2"></i>
+                    Residential & Commercial Electrical Installations
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-blue-600 text-xs mt-1 mr-2"></i>
+                    New Building Electrical Wiring & Rewiring
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-blue-600 text-xs mt-1 mr-2"></i>
+                    Switches, Sockets, and Lighting Installation
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Power & Backup Solutions -->
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                  <i class="fas fa-plug text-green-600 mr-2"></i>
+                  Power & Backup Solutions
+                </h4>
+                <ul class="text-gray-600 text-sm space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-green-600 text-xs mt-1 mr-2"></i>
+                    Generator Installation & Maintenance
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-green-600 text-xs mt-1 mr-2"></i>
+                    Solar Power System Installation
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-green-600 text-xs mt-1 mr-2"></i>
+                    Load Shedding Solutions & Power Backup
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Safety & Compliance -->
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-3 flex items-center">
+                  <i class="fas fa-shield-alt text-red-600 mr-2"></i>
+                  Safety & Compliance
+                </h4>
+                <ul class="text-gray-600 text-sm space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-red-600 text-xs mt-1 mr-2"></i>
+                    Electrical Safety Inspections & Certificates
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-red-600 text-xs mt-1 mr-2"></i>
+                    Earthing & Grounding System Installation
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-circle text-red-600 text-xs mt-1 mr-2"></i>
+                    24/7 Emergency Electrical Repairs
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plumbing Supplies -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg" data-aos="fade-left">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-boxes text-purple-600 text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900">Plumbing Supplies & Equipment</h3>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-pipe text-blue-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Pipes & Fittings</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-faucet text-blue-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Taps & Valves</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-tint text-blue-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Water Tanks & Pumps</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-fire text-orange-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Geysers & Heaters</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-toolbox text-gray-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Tools & Equipment</p>
+              </div>
+              <div class="bg-gray-50 rounded-xl p-4 text-center group hover:bg-blue-50 transition-colors">
+                <i class="fas fa-bath text-blue-600 text-2xl mb-2"></i>
+                <p class="text-sm font-medium text-gray-700">Sanitary Ware</p>
+              </div>
+            </div>
+
+            <div class="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-200">
+              <p class="text-sm text-blue-800 text-center font-medium">
+                Quality supplies from trusted brands
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center mt-16" data-aos="fade-up">
+          <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-12 text-white">
+            <h3 class="text-2xl md:text-3xl font-bold mb-4">Need Professional Help?</h3>
+            <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+              Our team of certified professionals is ready to handle all your plumbing and electrical needs with
+              expertise and care.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+              <a href="tel:+27211234567"
+                class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <i class="fas fa-phone mr-3"></i>
+                Call Now
+              </a>
+              <a href="#contact"
+                class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-xl transition-all duration-300">
+                <i class="fas fa-envelope mr-3"></i>
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <!-- Content Side -->
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <div class="max-w-2xl">
+              <!-- Section Header -->
+              <div class="mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                  Why Choose Tawcon Projects?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                  We are committed to providing high-quality, hassle-free, cost-effective plumbing and electrical
+                  services
+                  to the citizens of Cape Town and its surroundings. We find the right solutions to suit your specific
+                  needs.
+                </p>
+              </div>
+
+              <!-- CTA Button -->
+              <a href="#about"
+                class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                <i class="fas fa-info-circle mr-3 group-hover:scale-110 transition-transform"></i>
+                More About Us
+              </a>
+
+              <!-- Stats -->
+              <div class="grid grid-cols-2 gap-6 mt-12">
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                  <div class="text-gray-600 font-medium">Projects Completed</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                  <div class="text-gray-600 font-medium">Emergency Service</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">98%</div>
+                  <div class="text-gray-600 font-medium">Customer Satisfaction</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold text-blue-600 mb-2">15min</div>
+                  <div class="text-gray-600 font-medium">Average Response Time</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+          <!-- Features Grid -->
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Affordable -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-tag text-green-600 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-700 transition-colors">
+                      Affordable
+                    </h3>
+                    <p class="text-gray-600">
+                      Competitive pricing without compromising on quality. Get the best value for your investment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Reliable -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-700 transition-colors">
+                      Reliable
+                    </h3>
+                    <p class="text-gray-600">
+                      Dependable service you can count on. We show up on time and deliver as promised.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Top Expertise -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">
+                      Top Expertise
+                    </h3>
+                    <p class="text-gray-600">
+                      Certified professionals with years of experience in plumbing and electrical services.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 24/7 Customer Care -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-headset text-orange-600 text-xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-700 transition-colors">
+                      24/7 Customer Care
+                    </h3>
+                    <p class="text-gray-600">
+                      Round-the-clock support for emergencies and inquiries. We're here when you need us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Guaranteed Services -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group md:col-span-2">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-award text-red-600 text-xl"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-700 transition-colors">
+                      Guaranteed Services
+                    </h3>
+                    <p class="text-gray-600">
+                      All our work comes with comprehensive warranties and guarantees for your peace of mind.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Legally Compliant -->
+              <div
+                class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group md:col-span-2">
+                <div class="flex items-start space-x-4">
+                  <div
+                    class="flex-shrink-0 w-14 h-14 bg-indigo-100 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <i class="fas fa-gavel text-indigo-600 text-xl"></i>
+                  </div>
+                  <div class="flex-1">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-700 transition-colors">
+                      Legally Compliant
+                    </h3>
+                    <p class="text-gray-600">
+                      Fully licensed, insured, and compliant with all local regulations and safety standards.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
 
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Clients</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row no-gutters clients-wrap clearfix wow fadeInUp">
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in">
-              <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
-              <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="150">
-              <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
-              <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="250">
-              <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="client-logo" data-aos="zoom-in" data-aos-delay="350">
-              <img src="assets/img/clients/client-7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="client-logo">
-              <img src="assets/img/clients/client-8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="box" data-aos="zoom-in">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-            <div class="box featured" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="200">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-            <div class="box" data-aos="zoom-in" data-aos-delay="300">
-              <span class="advanced">Advanced</span>
-              <h3>Ultimate</h3>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
-              </ul>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
-
-    <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <ul class="faq-list">
-
-          <li data-aos="fade-up">
-            <a data-toggle="collapse" class="" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="icofont-simple-up"></i></a>
-            <div id="faq1" class="collapse show" data-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="100">
-            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="icofont-simple-up"></i></a>
-            <div id="faq2" class="collapse" data-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="200">
-            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="icofont-simple-up"></i></a>
-            <div id="faq3" class="collapse" data-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="300">
-            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="icofont-simple-up"></i></a>
-            <div id="faq4" class="collapse" data-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="400">
-            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="icofont-simple-up"></i></a>
-            <div id="faq5" class="collapse" data-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li data-aos="fade-up" data-aos-delay="500">
-            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="icofont-simple-up"></i></a>
-            <div id="faq6" class="collapse" data-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Contact Us</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-right">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p> Bella Verona, 26 Parklands Main Road, Parklands 7441.</p>
-              </div>
-
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@tawconprojects.co.za</p>
-              </div>
-
-              <div class="phone">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+27 76 039 4774s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.056623974427!2d18.510874899999997!3d-33.8108518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5f48aa23044b%3A0xcd8cdb5e767910ec!2sBella%20Verona%20flats!5e0!3m2!1sen!2sza!4v1763128298167!5m2!1sen!2sza" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+        <!-- Trust Indicators -->
+        <div class="mt-20" data-aos="fade-up">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div class="group">
+                <div
+                  class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-certificate text-blue-600 text-xl"></i>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Licensed Professionals</h4>
+                <p class="text-sm text-gray-600">Fully certified and registered</p>
               </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
 
+              <div class="group">
+                <div
+                  class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-shield-heart text-green-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Fully Insured</h4>
+                <p class="text-sm text-gray-600">Comprehensive insurance coverage</p>
+              </div>
+
+              <div class="group">
+                <div
+                  class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-clock text-purple-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Quick Response</h4>
+                <p class="text-sm text-gray-600">Fast emergency service</p>
+              </div>
+
+              <div class="group">
+                <div
+                  class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <i class="fas fa-thumbs-up text-orange-600 text-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900 mb-2">Quality Assured</h4>
+                <p class="text-sm text-gray-600">Premium materials & workmanship</p>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <!-- Bottom CTA -->
+        <div class="text-center mt-12" data-aos="fade-up">
+          <div class="inline-flex flex-col sm:flex-row gap-4 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <div class="flex items-center justify-center sm:justify-start">
+              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                <i class="fas fa-phone text-blue-600"></i>
+              </div>
+              <div class="text-left">
+                <p class="text-sm text-gray-600">Ready to get started?</p>
+                <p class="text-lg font-bold text-gray-900">Call us today!</p>
+              </div>
+            </div>
+            <a href="tel:+27760394774"
+              class="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl transition-all duration-300 transform hover:-translate-y-1">
+              <i class="fas fa-phone mr-2"></i>
+              +27 76 039 4774
+            </a>
+          </div>
+        </div>
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+
+  <!-- ======= Contact Section ======= -->
+<section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Get In Touch
+      </h2>
+      <p class="text-lg text-gray-600">
+        Ready to start your project? Contact us today for a free consultation and quote.
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-12">
+      <!-- Contact Information -->
+      <div class="lg:w-2/5" data-aos="fade-right">
+        <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 h-full">
+          <h3 class="text-2xl font-bold text-gray-900 mb-8">Contact Information</h3>
+          
+          <!-- Contact Items -->
+          <div class="space-y-8">
+            <!-- Address -->
+            <div class="flex items-start space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class="fas fa-map-marker-alt text-blue-600 text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Our Location</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Bella Verona, 26 Parklands Main Road,<br>
+                  Parklands 7441, Cape Town
+                </p>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class="fas fa-envelope text-green-600 text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Email Us</h4>
+                <p class="text-gray-600 mb-2">Send us a message anytime</p>
+                <a href="mailto:info@tawconprojects.co.za" 
+                   class="text-lg font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+                  info@tawconprojects.co.za
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start space-x-4 group">
+              <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class="fas fa-phone text-orange-600 text-lg"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-2">Call Us</h4>
+                <p class="text-gray-600 mb-2">Available 24/7 for emergencies</p>
+                <a href="tel:+27760394774" 
+                   class="text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+                  +27 76 039 4774
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="mt-12 p-6 bg-blue-50 rounded-xl border border-blue-200">
+            <h4 class="font-semibold text-gray-900 mb-4 flex items-center">
+              <i class="fas fa-clock text-blue-600 mr-3"></i>
+              Business Hours
+            </h4>
+            <div class="space-y-2 text-sm text-gray-600">
+              <div class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span class="font-semibold">7:00 AM - 6:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Saturday</span>
+                <span class="font-semibold">8:00 AM - 2:00 PM</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Sunday & Holidays</span>
+                <span class="font-semibold text-blue-600">Emergency Only</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency Banner -->
+          <div class="mt-6 p-4 bg-red-50 rounded-xl border border-red-200">
+            <div class="flex items-center space-x-3">
+              <div class="flex-shrink-0 w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
+                <i class="fas fa-exclamation-triangle text-red-600"></i>
+              </div>
+              <div>
+                <p class="text-red-800 font-semibold">24/7 Emergency Service</p>
+                <p class="text-red-600 text-sm">Call us anytime for urgent plumbing or electrical issues</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:w-3/5" data-aos="fade-left">
+        <div class="bg-white rounded-2xl p-8 shadow-xl border border-gray-200 h-full">
+          <h3 class="text-2xl font-bold text-gray-900 mb-8">Send Us a Message</h3>
+          
+          <form class="space-y-6" id="contact-form">
+            <!-- Name & Email Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Name *
+                </label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                >
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Your Email *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                >
+              </div>
+            </div>
+
+            <!-- Phone & Service Type -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Phone Number
+                </label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                >
+              </div>
+              <div>
+                <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">
+                  Service Needed
+                </label>
+                <select 
+                  id="service" 
+                  name="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                >
+                  <option value="">Select a service</option>
+                  <option value="plumbing">Plumbing Services</option>
+                  <option value="electrical">Electrical Services</option>
+                  <option value="solar">Solar Systems</option>
+                  <option value="emergency">Emergency Repair</option>
+                  <option value="maintenance">General Maintenance</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Subject -->
+            <div>
+              <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
+                Subject *
+              </label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+              >
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
+                Message *
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="6"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="flex items-center justify-between pt-4">
+              <div class="text-sm text-gray-500">
+                * Required fields
+              </div>
+              <button 
+                type="submit"
+                class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <i class="fas fa-paper-plane mr-3"></i>
+                Send Message
+              </button>
+            </div>
+          </form>
+
+          <!-- Form Status Messages -->
+          <div id="form-messages" class="mt-6 space-y-3 hidden">
+            <div id="loading-message" class="p-4 bg-blue-50 rounded-xl border border-blue-200 text-blue-700 hidden">
+              <div class="flex items-center">
+                <i class="fas fa-spinner fa-spin mr-3"></i>
+                <span>Sending your message...</span>
+              </div>
+            </div>
+            <div id="success-message" class="p-4 bg-green-50 rounded-xl border border-green-200 text-green-700 hidden">
+              <div class="flex items-center">
+                <i class="fas fa-check-circle mr-3"></i>
+                <span>Your message has been sent successfully! We'll get back to you soon.</span>
+              </div>
+            </div>
+            <div id="error-message" class="p-4 bg-red-50 rounded-xl border border-red-200 text-red-700 hidden">
+              <div class="flex items-center">
+                <i class="fas fa-exclamation-circle mr-3"></i>
+                <span>There was an error sending your message. Please try again or call us directly.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Contact Form Handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const formMessages = document.getElementById('form-messages');
+    const loadingMessage = document.getElementById('loading-message');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show loading state
+      formMessages.classList.remove('hidden');
+      loadingMessage.classList.remove('hidden');
+      successMessage.classList.add('hidden');
+      errorMessage.classList.add('hidden');
+
+      // Simulate form submission (replace with actual form submission)
+      setTimeout(() => {
+        loadingMessage.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+        
+        // Reset form
+        contactForm.reset();
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          formMessages.classList.add('hidden');
+        }, 5000);
+      }, 2000);
+    });
+  });
+</script>
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>Tawcon Projects</h3>
-              <p>
-                 Bella Verona, 26 Parklands Main Road, Parklands 7441.<br><br>
-                <strong>Phone:</strong> +27 76 039 4774<br>
-                <strong>Email:</strong> info@tawconprojects.co.za<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+<!-- ======= Footer ======= -->
+<footer class="bg-blue-900 text-white">
+  <!-- Main Footer Content -->
+  <div class="border-b border-gray-700">
+    <div class="container mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Company Info -->
+        <div class="lg:col-span-1">
+          <div class="footer-info">
+            <h3 class="text-2xl font-bold mb-6 flex items-center">
+              <span class="text-white bg-clip-text bg-gradient-to-r from-blue-400 to-blue-300">
+                Tawcon Projects
+              </span>
+            </h3>
+            <p class="text-gray-300 mb-6 leading-relaxed">
+              Professional plumbing and electrical services in Cape Town. Quality workmanship, reliable service, and customer satisfaction guaranteed.
+            </p>
+            <div class="space-y-3 text-gray-300">
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt text-blue-400 mr-3 w-5"></i>
+                <span>Bella Verona, 26 Parklands Main Road, Parklands 7441</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-blue-400 mr-3 w-5"></i>
+                <a href="tel:+27760394774" class="hover:text-white transition-colors">+27 76 039 4774</a>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-blue-400 mr-3 w-5"></i>
+                <a href="mailto:info@tawconprojects.co.za" class="hover:text-white transition-colors">info@tawconprojects.co.za</a>
               </div>
             </div>
+            
+            <!-- Social Links -->
+            <div class="flex space-x-4 mt-6">
+              <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                <i class="fab fa-facebook-f text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                <i class="fab fa-instagram text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                <i class="fab fa-twitter text-white"></i>
+              </a>
+              <a href="#" class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-lg flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1">
+                <i class="fab fa-linkedin-in text-white"></i>
+              </a>
+            </div>
           </div>
+        </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
+        <!-- Quick Links -->
+        <div class="lg:col-span-1">
+          <h4 class="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#home" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#services" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Our Work
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Our Services -->
+        <div class="lg:col-span-1">
+          <h4 class="text-lg font-semibold mb-6 text-white">Our Services</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Plumbing Repairs
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Electrical Installations
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Solar Systems
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Drain Cleaning
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Leak Detection
+              </a>
+            </li>
+            <li>
+              <a href="#" class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                <i class="fas fa-chevron-right text-blue-400 text-xs mr-2 group-hover:translate-x-1 transition-transform"></i>
+                Emergency Services
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Emergency Contact & Newsletter -->
+        <div class="lg:col-span-1">
+          <!-- Emergency Contact -->
+          <div class="bg-red-900/30 border border-red-700 rounded-xl p-6 mb-6">
+            <h4 class="text-lg font-semibold mb-4 text-white flex items-center">
+              <i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>
+              24/7 Emergency
+            </h4>
+            <p class="text-gray-300 text-sm mb-4">
+              Need immediate assistance? Call us anytime for emergency plumbing or electrical services.
+            </p>
+            <a href="tel:+27760394774" class="inline-flex items-center justify-center w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+              <i class="fas fa-phone mr-2"></i>
+              Call Now
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Tawcon Projects</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-      Powered by <a target="_blank" href="https://ephraimdev.site/">EphraimDev</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+  </div>
+</footer>
 
   <a href="#" class="back-to-top"><i class="bx bxs-up-arrow-alt"></i></a>
 
