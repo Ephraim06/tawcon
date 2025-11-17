@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 .back-to-top {
   position: fixed;
   display: none;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   z-index: 99999;
 }
@@ -44,15 +44,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   width: 40px;
   height: 40px;
-  border-radius: 4px;
-  background: #009cea;
   color: #fff;
   transition: all 0.4s;
-}
-
-.back-to-top i:hover {
-  background: #14b1ff;
-  color: #fff;
 }
 
 /*--------------------------------------------------------------
